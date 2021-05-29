@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 1</title>
+</head>
+<body>
+<div class="green">Click Me!</div>
+<script>
+    // var name = 'Vasya';
+    // var name = 'Kate';
+    // var age = 30;
+    // console.log(name, age);
+    // const name = 'Vasya';
+    // name = 'Kate';
+    // var age = 30;
+    // console.log(name, age);
+    // console.log(b);
+    // let b = 10;
+    // {
+    //     var a = 1;
+    //     let b = 2;
+    //     console.log(b);
+    // }
+    // console.log(b);
+
+    // ES5
+    // function passTest(result) {
+    //     if (result) {
+    //         var firstName = 'John';
+    //         var yearOfBirth = 1990;
+    //     }
+    //
+    //     console.log(firstName + ' рожденный в ' + yearOfBirth + ' сдал тест');
+    // }
+    //
+    // passTest(false);
+
+    // ES6
+    // function passTest(result) {
+    //     let firstName;
+    //     let yearOfBirth;
+    //     if (result) {
+    //         firstName = 'John';
+    //         yearOfBirth = 1990;
+    //     }
+    //
+    //     console.log(firstName + ' рожденный в ' + yearOfBirth + ' сдал тест');
+    // }
+    //
+    // passTest(false);
+
+    // ES5
+    // var i = 23;
+    //
+    // for (var i = 0; i < 5; i++) {
+    //     console.log(i)
+    // }
+    // console.log(i);
+
+    // ES5
+    // let i = 23;
+    //
+    // for (let i = 0; i < 5; i++) {
+    //     console.log(i)
+    // }
+    // console.log(i);
+    // 'use strict';
+    // function a() {
+    //     'use strict';
+    //     var b = 5;
+    //     let c = 10;
+    //     d = 20;
+    // }
+    // a();
+    // // console.log(b);
+    // // console.log(c);
+    // console.log(d);
+
+    // ES5
+    // var firstName = 'John';
+    // var lastName = 'Smith';
+    // var yearOfBirth = 1990;
+    //
+    // function calcAge(yearOfBirth) {
+    //     return 2021 - yearOfBirth;
+    // }
+    //
+    // console.log(firstName + ' ' + lastName + ' рожден в ' + yearOfBirth + '. Ему сейчас ' + calcAge(yearOfBirth) + ' лет');
+
+    // ES6
+    // let firstName = 'John';
+    // let lastName = 'Smith';
+    // let yearOfBirth = 1990;
+    //
+    // function calcAge(yearOfBirth) {
+    //     return 2021 - yearOfBirth;
+    // }
+    //
+    // console.log(`${firstName} ${lastName} рожден в ${yearOfBirth} Ему сейчас ${calcAge(yearOfBirth)} лет(год)`);
+
+    // let str = `${firstName} ${lastName}`;
+    // console.log(str);
+    // console.log(str.startsWith('J'));
+    // console.log(str.endsWith('th'));
+    // console.log(str.includes('n S'));
+    // console.log(`${str} `.repeat(5));
+
+    // ES6
+    // const foo = () => {
+    //     return 5;
+    // }
+    // const foo = (x) => {
+    //     return 5 + x;
+    // }
+    // const foo = x => 5 + x;
+    // const foo = (x, y = 10) => {
+    //     return (5 + x) * y;
+    // }
+    //
+    // console.log(foo(4, 3));
+
+    // ES5
+    // var box = {
+    //     color: 'green',
+    //     position: 1,
+    //     clickMe: function () {
+    //         // console.log(this);
+    //         var self = this;
+    //         // document.getElementsByClassName('green')[0]
+    //         //     .addEventListener('click', function () {
+    //         //         console.log(self)
+    //         //         console.log('This is a box number ' + self.position + ' and color ' + self.color);
+    //         //     });
+    //         document.getElementsByClassName('green')[0]
+    //             .addEventListener('click', function () {
+    //                 console.log(this)
+    //                 console.log('This is a box number ' + this.position + ' and color ' + this.color);
+    //             }.bind(this));
+    //     }
+    // };
+    //
+    // box.clickMe();
+
+    // ES6
+    // const box = {
+    //     color: 'green',
+    //     position: 1,
+    //     clickMe: function () {
+    //         document.querySelector('.green').addEventListener('click', () => {
+    //             console.log(this);
+    //             let str = `This is a box number ${this.position} and color ${this.color}`;
+    //             console.log(str);
+    //         });
+    //     },
+    // };
+    // box.clickMe();
+    // function foo() {
+    //     console.log(arguments);
+    // }
+    //
+    // foo(1, 5, 6);
+
+    // const bar = () => {
+    //     console.log(arguments);
+    // }
+    //
+    // bar(1, 6, 8);
+
+    // ES5
+    // var arr = ['John', 25];
+    // var name = arr[0];
+    // var age = arr[1];
+    //
+    // console.log(name, age);
+
+    // ES6
+    // const arr = ['John', 25, true];
+    // let [name, age] = arr;
+    // let [name,, isAdmin] = arr;
+
+    // console.log(name, age);
+    // console.log(name, isAdmin);
+
+    // const obj = {
+    //     firstName: 'John',
+    //     lastName: 'Snow',
+    //     colors: ['white', 'black'],
+    // };
+    //
+    // // let {firstName, lastName, colors} = obj;
+    // let {firstName: n, lastName: ln, colors: [a, b]} = obj;
+    //
+    // // console.log(firstName, lastName, colors);
+    // // console.log(n, ln, c);
+    // console.log(n, ln, a, b);
+
+    // const user = {
+    //     name: 'Vasya',
+    //     lastName: 'Petrov',
+    //     age: 20,
+    //     isAdmin: false,
+    // }
+    //
+    // // function sendMsgToUser(user) {
+    // //     console.log('Hello! ' + user.name);
+    // // }
+    // function sendMsgToUser({name, age}) {
+    //     console.log(arguments);
+    //     console.log('Hello! ' + name, age);
+    // }
+    //
+    // sendMsgToUser(user);
+</script>
+</body>
+</html>
